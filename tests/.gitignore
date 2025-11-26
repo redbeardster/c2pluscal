@@ -1,0 +1,4 @@
+# Generated test outputs
+*.tla
+*.cfg
+*.dump

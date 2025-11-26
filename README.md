@@ -22,24 +22,33 @@ Based on: [`C2TLA+ by Amira METHNI`](https://hal.science/hal-01314832/document)
 
 > [!IMPORTANT]
 > This software is still under development, and may not compile or run correctly.
-> No automated test or CI/CD infrastructure is available yet.
 
 ## 📥 Compilation / Installation
 
-Before starting, make sure you have **[Frama-C][1]** and **[OCaml/dune][2]** installed.
+### Requirements
+- **OCaml** 5.1.1 or later
+- **Frama-C** 30.0 (Zinc) or later
+- **dune** 3.7 or later
 
-From the root directory, run:
+### Installation
 
 ```bash
+# Install dependencies
+opam install frama-c dune
+
+# Initialize environment
+eval $(opam env)
+
+# Build and install
+cd src
 dune build
 dune install
 ```
 
-This installs **C2PlusCal** as a Frama-C plugin.
-You can check that by listing all available plugins of `Frama-C` by running:
+### Verification
 
 ```bash
-frama-c -plugins
+frama-c -plugins | grep pluscal
 ```
 
 ## 🚀 Plugin Usage
@@ -98,6 +107,23 @@ In this case, refer to steps described in the section *How to use it* of
 [CommunityModules repository][9].
 Otherwise, you can just remove it from the list of imported modules.
 
+
+## 🧪 Testing
+
+Run the test suite:
+
+```bash
+cd tests
+python3 run_tests.py
+```
+
+Or using Make:
+
+```bash
+make test
+```
+
+See [`tests/README.md`](./tests/README.md) for details.
 
 ## Documentation
 

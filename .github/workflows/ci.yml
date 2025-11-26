@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  push:
+    branches: [ master, main, dev ]
+  pull_request:
+    branches: [ master, main, dev ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    
+    - name: Set up OCaml
+      uses: ocaml/setup-ocaml@v2
+      with:
+        ocaml-compiler: 5.1.x
+    
+    - name: Install Frama-C
+      run: |
+        opam install -y frama-c dune
+        eval $(opam env)
+    
+    - name: Build project
+      run: |
+        eval $(opam env)
+        cd src && dune build
+    
+    - name: Install plugin
+      run: |
+        eval $(opam env)
+        cd src && dune install
+    
+    - name: Run tests
+      run: |
+        eval $(opam env)
+        cd tests && python3 run_tests.py --verbose
