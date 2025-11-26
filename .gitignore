@@ -1,8 +1,8 @@
 
 #Produced files
-*.cfg
+
 *.old
-*.tla
+
 *.out
 *.dot
 *.dump
