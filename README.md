@@ -125,6 +125,20 @@ make test
 
 See [`tests/README.md`](./tests/README.md) for details.
 
+## ✅ Verification with TLA+ Toolbox
+
+After generating PlusCal specifications, verify them with TLC model checker:
+
+```bash
+# Generate specification
+frama-c -pluscal tests/test_simple.c
+
+# Open test_simple.tla in TLA+ Toolbox
+# Press Ctrl+T to translate, then F11 to verify
+```
+
+See [`QUICKSTART_TLA.md`](./QUICKSTART_TLA.md) for quick start or [`doc/tla_toolbox_guide.md`](./doc/tla_toolbox_guide.md) for detailed guide.
+
 ## Documentation
 
 📄 **Full documentation available in [`doc/`](./doc/)**.

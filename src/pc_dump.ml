@@ -423,14 +423,17 @@ let dump_constant out (cst: string) =
 **)
 let dump_prog out (prog: pc_prog) =
   Format.fprintf out "------------------------------ MODULE %s ------------------------------\n" prog.pc_prog_name;
-  Format.fprintf out "EXTENDS Integers, FiniteSets, Sequences, Bitwise\n";
+  Format.fprintf out "EXTENDS Integers, FiniteSets, Sequences\n";
 
   (*Constant section*)
   Format.fprintf out "CONSTANT ";
   dump_list out (List.map (fun proc -> proc.pc_process_set) prog.pc_processus) (dump_constant);
-  Format.fprintf out ",UNDEF,\n";
-  Format.fprintf out "         ";
-  dump_list out (List.map (fun (cst_name,_) -> cst_name) prog.pc_constants) (dump_constant);
+  Format.fprintf out ",UNDEF";
+  (* Add constants if any *)
+  (match prog.pc_constants with
+    | [] -> ()
+    | _ -> Format.fprintf out ",\n         "; 
+           dump_list out (List.map (fun (cst_name,_) -> cst_name) prog.pc_constants) (dump_constant));
   Format.fprintf out "\n";
   Format.fprintf out "\n";
 

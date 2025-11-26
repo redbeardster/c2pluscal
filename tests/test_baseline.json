@@ -1,0 +1,122 @@
+{
+  "timestamp": "2025-11-27T01:08:45.824775",
+  "results": {
+    "test": {
+      "success": true,
+      "stderr_lines": 1,
+      "tla_size": 15660,
+      "tla_lines": 675,
+      "has_algorithm": true,
+      "cfg_size": 172,
+      "cfg_lines": 19
+    },
+    "test_array_pointers": {
+      "success": true,
+      "stderr_lines": 1,
+      "tla_size": 4247,
+      "tla_lines": 177,
+      "has_algorithm": true,
+      "cfg_size": 139,
+      "cfg_lines": 16
+    },
+    "test_arrays": {
+      "success": true,
+      "stderr_lines": 1,
+      "tla_size": 4003,
+      "tla_lines": 177,
+      "has_algorithm": true,
+      "cfg_size": 139,
+      "cfg_lines": 16
+    },
+    "test_conditionals": {
+      "success": true,
+      "stderr_lines": 1,
+      "tla_size": 4715,
+      "tla_lines": 215,
+      "has_algorithm": true,
+      "cfg_size": 139,
+      "cfg_lines": 16
+    },
+    "test_edge_cases": {
+      "success": true,
+      "stderr_lines": 1,
+      "tla_size": 4769,
+      "tla_lines": 218,
+      "has_algorithm": true,
+      "cfg_size": 139,
+      "cfg_lines": 16
+    },
+    "test_globals": {
+      "success": true,
+      "stderr_lines": 1,
+      "tla_size": 3853,
+      "tla_lines": 165,
+      "has_algorithm": true,
+      "cfg_size": 139,
+      "cfg_lines": 16
+    },
+    "test_loops": {
+      "success": true,
+      "stderr_lines": 1,
+      "tla_size": 4904,
+      "tla_lines": 227,
+      "has_algorithm": true,
+      "cfg_size": 139,
+      "cfg_lines": 16
+    },
+    "test_multiple_functions": {
+      "success": true,
+      "stderr_lines": 1,
+      "tla_size": 5540,
+      "tla_lines": 245,
+      "has_algorithm": true,
+      "cfg_size": 139,
+      "cfg_lines": 16
+    },
+    "test_nested_loops": {
+      "success": true,
+      "stderr_lines": 1,
+      "tla_size": 4348,
+      "tla_lines": 194,
+      "has_algorithm": true,
+      "cfg_size": 139,
+      "cfg_lines": 16
+    },
+    "test_pointers": {
+      "success": true,
+      "stderr_lines": 1,
+      "tla_size": 3625,
+      "tla_lines": 164,
+      "has_algorithm": true,
+      "cfg_size": 139,
+      "cfg_lines": 16
+    },
+    "test_recursion": {
+      "success": true,
+      "stderr_lines": 1,
+      "tla_size": 4689,
+      "tla_lines": 203,
+      "has_algorithm": true,
+      "cfg_size": 139,
+      "cfg_lines": 16
+    },
+    "test_simple": {
+      "success": true,
+      "stderr_lines": 1,
+      "tla_size": 3433,
+      "tla_lines": 151,
+      "has_algorithm": true,
+      "cfg_size": 139,
+      "cfg_lines": 16
+    },
+    "test_structs": {
+      "success": true,
+      "stderr_lines": 1,
+      "tla_size": 3700,
+      "tla_lines": 157,
+      "has_algorithm": true,
+      "cfg_size": 139,
+      "cfg_lines": 16
+    }
+  }
+}
